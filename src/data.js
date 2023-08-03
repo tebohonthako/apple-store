@@ -1,0 +1,68 @@
+const products = [
+    {
+      id: 1,
+      title: 'iPhone 12',
+      description: 'Midnight Black.',
+      price: 1122.99,
+      currency: 'USD',
+      imageUrl: 'https://www.pexels.com/photo/a-close-up-shot-of-a-person-holding-an-iphone-10914594/',
+    },
+  {
+      id: 2,
+      title: 'iPhone 13',
+      description: 'Sunset Gold.',
+      price: 1299.99,
+      currency: 'USD',
+      imageUrl: 'https://bash.com/iphone-14-pro-256gb-270085aalw6/p?idsku=1148430&gclid=Cj0KCQjwoK2mBhDzARIsADGbjer2Ho3WNAwkO0R7T7uPagMPk1FAEag4r7TM4tDyz6T8Sl24_gNFyA0aApIvEALw_wcB',
+    },
+  {
+      id: 3,
+      title: 'iPad Pro',
+      description: 'Space Gray.',
+      price: 799.00,
+      currency: 'USD',
+      imageUrl: 'https://www.cgtrader.com/3d-models/electronics/phone/ipad-air-space-gray-2022',
+    },
+  {
+      id: 4,
+      title: 'MacBook Air',
+      description: 'Silver.',
+      price: 1299.00,
+      currency: 'USD',
+      imageUrl: 'https://www.istore.co.za/media/catalog/product/m/a/macbook_air_space_gray_with_m1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
+    },
+  {
+      id: 5,
+      title: 'Apple Watch Series 7',
+      description: 'Blue Aluminum.',
+      price: 399.00,
+      currency: 'USD',
+      imageUrl: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/FKN83_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1647901251880',
+    },
+  {
+      id: 6,
+      title: 'AirPods Pro',
+      description: 'White.',
+      price: 249.00,
+      currency: 'USD',
+      imageUrl: 'https://odo-cdn.imgix.net/catalog/product/164/153/1641538749.785.jpeg?auto=compress,format&w=800&h=800&bg=fff&fit=fill',
+    },
+  {
+      id: 7,
+      title: 'Mac Mini',
+      description: 'Space Gray.',
+      price: 699.00,
+      currency: 'USD',
+      imageUrl: 'https://www.nexus.com.bd/images/detailed/5/Apple_Mac_Mini_Intel_Core-i5_8GB_512GB_.jpg',
+    },
+  {
+      id: 8,
+      title: 'Apple Pencil 2nd Gen',
+      description: 'For iPad Pro.',
+      price: 129.00,
+      currency: 'USD',
+      imageUrl: 'https://hip2save.com/wp-content/uploads/2022/09/apple-pencil-2.jpg',
+    },
+  ];
+
+  export default products;
