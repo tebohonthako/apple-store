@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import products from './data';
+import SideBar from './SideBar';
 
 const Homepage = () => {
   return (
     <div>
       <h1>Welcome to our E-Commerce Store</h1>
+      <SideBar/>
       <div className="row product-list">
         {products.map((product) => (
           <div key={product.id} className="col-md-4 mb-4">
