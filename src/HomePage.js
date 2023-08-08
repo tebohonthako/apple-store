@@ -10,7 +10,7 @@ const Homepage = () => {
       <SideBar/>
       <div className="row product-list">
         {products.map((product) => (
-          <div key={product.id} className="col-md-4 mb-4">
+          <div key={product.id} className="col-md-3 mb-4">
             <div className="card" style={{ width: '18rem' }}>
               <img src={product.imageUrl} className="card-img-top" alt={product.title} />
               <div className="card-body">
