@@ -65,5 +65,18 @@
   margin-bottom: 1.5rem;
  
 }
+.search-item {
+  text-align: center;
+  
+}
+.search-bar {
+  width: 25%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0rem solid white;
+}
 
-
+.search-item-label {
+  color: grey;
+  margin-left: -20rem;
+}

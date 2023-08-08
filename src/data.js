@@ -13,7 +13,7 @@ const products = [
       description: 'Light Grey',
       price: 39.99,
       currency: '$',
-      imageUrl: 'https://m.media-amazon.com/images/I/51YzJdAnLSL._AC_UF1000,1000_QL80_.jpg',
+      imageUrl: 'https://m.media-amazon.com/images/I/61DeaUKGHrL._AC_UF350,350_QL80_.jpg',
     },
   {
       id: 3,
@@ -61,7 +61,7 @@ const products = [
       description: 'Product Red',
       price: 619.99,
       currency: '$',
-      imageUrl: 'https://media.karousell.com/media/photos/products/2021/11/16/iphone_11_red_1637063431_902de82d_progressive.jpg',
+      imageUrl: 'https://images.squarespace-cdn.com/content/v1/59d2bea58a02c78793a95114/1638557435572-UYISRNGX323H0CMYA0XM/iPhone+13.png?format=1000w',
     },
   ];
 
