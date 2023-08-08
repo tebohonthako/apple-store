@@ -17,7 +17,6 @@ const SideBar = () => {
           <li>
             <a href="/checkout">Checkout</a>
           </li>
-          {/* Add more menu items here as needed */}
         </ul>
       </div>
     );
