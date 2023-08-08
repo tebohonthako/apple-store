@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: 'Inter', sans-serif;
+  
 }
 
 .App-logo {
@@ -36,3 +38,32 @@
     transform: rotate(360deg);
   }
 }
+ 
+/* ///////////////////////////////// */
+
+.store {
+  background-color: #EEEDE8;
+ 
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  border: 0rem solid white;
+  border-radius: 20%;
+}
+.product-list {
+  margin-left: 12%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  
+}
+.card {
+  border-radius: 1rem;
+  border: 0rem solid white;
+  width: calc(33.33% - 1rem); /* Adjust the card width for different screen sizes */
+  margin-bottom: 1.5rem;
+ 
+}
+
+
