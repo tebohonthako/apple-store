@@ -6,7 +6,7 @@ import SideBar from './SideBar';
 const Homepage = () => {
   return (
     <div>
-      <h1>Welcome to our E-Commerce Store</h1>
+      <h1>Dashboard</h1>
       <SideBar/>
       <div className="row product-list">
         {products.map((product) => (
@@ -17,7 +17,7 @@ const Homepage = () => {
                 <h5 className="card-title">{product.title}</h5>
                 <p className="card-text">{product.description}</p>
                 <p>Price: {product.currency} {product.price.toFixed(2)}</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+                <a href="#" className="btn btn-primary">Buy</a>
               </div>
             </div>
           </div>
