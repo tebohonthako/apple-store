@@ -22,13 +22,18 @@ const ProductDetails = () => {
           style={{ maxWidth: '300px', margin: '0 auto' }}
         />
         <div className="card-body">
-          <h5 className="card-title">{product.title}</h5>
+          <h1 className="card-title">{product.title}</h1>
           <p className="card-text">{product.description}</p>
+          <p className="card-text">Rating: {product.rating}</p>
           <p className="card-text">
             Price: {product.currency} {product.price.toFixed(2)}
           </p>
-          <p className="card-text">Rating: {product.rating}</p>
-          <h6 className="card-title">Specifications:</h6>
+          <Link to="" className="btn btn-primary">
+          Add to Bag
+          </Link>
+          <hr/>
+          <br/>
+          <h6 className="card-title">Description:</h6>
           <ul className="list-group">
             {product.specs.map((spec, index) => (
               <li key={index} className="list-group-item">
