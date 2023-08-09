@@ -46,11 +46,11 @@
  
 }
 
-.btn {
+.bag-button {
   background-color: black;
   color: white;
   border: 0rem solid white;
-  border-radius: 20%;
+  border-radius: 10%;
 }
 .product-list {
   margin-left: 12%;
@@ -79,4 +79,18 @@
   color: grey;
   margin-left: -20rem;
   margin-top: 2rem;
+}
+
+.add-to-bag {
+  border-radius: 20%;
+  background-color: black;
+}
+
+/* Details page styling */
+.product-details-container  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  
 }

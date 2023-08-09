@@ -2,6 +2,9 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import products from './data';
 import SideBar from './SideBar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'; // or other appropriate import depending on the style you need
+
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -12,7 +15,7 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="container mt-5">
+    <div className="product-details-container container mt-5">
       <SideBar/>
       <div className="card">
         <img
@@ -29,7 +32,9 @@ const ProductDetails = () => {
             Price: {product.currency} {product.price.toFixed(2)}
           </p>
           <Link to="" className="btn btn-primary">
-          Add to Bag
+          <button className="btn btn-primary">
+          <FontAwesomeIcon icon={faShoppingBag} /> Add to Bag
+          </button>
           </Link>
           <hr/>
           <br/>
@@ -44,7 +49,7 @@ const ProductDetails = () => {
         </div>
       </div>
       <div className="mt-3">
-        <Link to="/" className="btn btn-secondary">
+        <Link to="/">
           Back to Homepage
         </Link>
       </div>
