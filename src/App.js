@@ -1,20 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage';
-import './App.css'
+import ProductDetails from './ProductDetails';
 
 const App = () => {
   return (
-    <div className='store'>
-      <header>
-        {/* Your header content goes here */}
-      </header>
-      <main>
-        <HomePage />
-      </main>
-      <footer>
-        {/* Your footer content goes here */}
-      </footer>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+      </Routes>
+    </Router>
   );
 };
+
 export default App;
