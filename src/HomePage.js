@@ -5,7 +5,7 @@ import SideBar from './SideBar';
 
 const Homepage = () => {
   return (
-    <div>
+    <div className='cards'>
       <form className='search-item'>
         <label className='search-item-label'>Search item</label>
         <br/>

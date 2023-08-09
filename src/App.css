@@ -55,8 +55,6 @@
 .product-list {
   margin-left: 12%;
   margin-right: 10%;
-  
-  
 }
 .card {
   border-radius: 1rem;
@@ -67,16 +65,18 @@
 }
 .search-item {
   text-align: center;
-  
 }
 .search-bar {
   width: 25%;
-  padding: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
   border-radius: 1rem;
   border: 0rem solid white;
-}
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
 
+}
 .search-item-label {
   color: grey;
   margin-left: -20rem;
+  margin-top: 2rem;
 }
