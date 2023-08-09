@@ -21,6 +21,7 @@ const Homepage = () => {
                 <h5 className="card-title">{product.title}</h5>
                 <p className="card-text">{product.description}</p>
                 <p>Price: {product.currency} {product.price.toFixed(2)}</p>
+                <Link to={`/product/${product.id}`} className="btn btn-primary">View</Link>
                 <a href="#" className="btn btn-primary">Buy</a>
               </div>
             </div>
