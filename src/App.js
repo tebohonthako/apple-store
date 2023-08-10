@@ -1,20 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './HomePage';
+import HomePage from './HomePage'; // Import your homepage component
 import ProductDetails from './ProductDetails';
-import Bag from './Bag';
-import './App.css';
+import Bag from './Bag'; // Import your Bag component
+import { BagProvider } from './BagContext'; // Import your BagProvider
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Routes>
+    <BagProvider>
+      <Router>
+        <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="/product/:id" element={<Bag/>}/>
-      </Routes>
-    </Router>
+        <Route path="/Bag" element={<Bag/>}/>
+        </Routes>
+      </Router>
+    </BagProvider>
   );
-};
+}
 
 export default App;
