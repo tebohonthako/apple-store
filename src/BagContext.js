@@ -9,8 +9,13 @@ export const BagProvider = ({ children }) => {
     setBagItems([...bagItems, product]);
   };
 
+  const removeFromBag = (product) => {
+    const updatedBagItems = bagItems.filter(item => item !== product);
+    setBagItems(updatedBagItems);
+  };
+
   return (
-    <BagContext.Provider value={{ bagItems, addToBag }}>
+    <BagContext.Provider value={{ bagItems, addToBag, removeFromBag }}> {/* Add removeFromBag */}
       {children}
     </BagContext.Provider>
   );
