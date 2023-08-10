@@ -3,8 +3,12 @@ import { useParams, Link } from 'react-router-dom';
 import products from './data';
 import SideBar from './SideBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'; // or other appropriate import depending on the style you need
 import './ProductDetails.css';
+
+
+
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -35,8 +39,14 @@ const ProductDetails = () => {
           <p className="card-text">
             Price: {product.currency} {product.price.toFixed(2)}
           </p>
-          <Link to="/" className="btn btn-primary add-to-bag">
-            <FontAwesomeIcon icon={faShoppingBag} /> Add to Bag
+
+         
+
+          <Link to="/Bag" className="btn btn-primary">
+          <button className="btn btn-primary">
+          <FontAwesomeIcon icon={faShoppingBag} /> Add to Bag
+          </button>
+
           </Link>
     </div>
         </div>
