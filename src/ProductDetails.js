@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useBag } from './BagContext'; // Import useBag from your BagContext
 import products from './data';
 import SideBar from './SideBar';
+import BagSideBar from './BagSideBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import './ProductDetails.css';
@@ -21,6 +22,7 @@ const ProductDetails = () => {
   return (
     <div className="product-details-container container mt-5">
       <SideBar />
+      <BagSideBar />
       <div className="mt-3">
         <Link to="/">Back</Link>
       </div>

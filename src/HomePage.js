@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import products from './data'; // Import your products data
 import SearchBar from './SearchBar';
 import SideBar from './SideBar';
+import BagSideBar from './BagSideBar';
 import './App.css';
 
 const Homepage = () => {
@@ -19,6 +20,7 @@ const Homepage = () => {
     <div className='cards'>
       <SearchBar onSearch={handleSearch} />
       <SideBar />
+      <BagSideBar />
       <div className="row product-list">
         {filteredProducts.map((product) => (
           <div key={product.id} className="col-md-3 mb-4">
@@ -39,6 +41,7 @@ const Homepage = () => {
             </div>
           </div>
         ))}
+      
       </div>
     </div>
   );
