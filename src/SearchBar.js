@@ -23,7 +23,7 @@ const SearchBar = ({ products, onSearch }) => {
         value={searchQuery}
         onChange={handleSearchChange}
       />
-      <button type='submit'>Search</button>
+      <button type='submit' className='search-button'>Search</button>
     </form>
   );
 };
