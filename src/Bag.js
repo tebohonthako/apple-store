@@ -1,30 +1,25 @@
 import React, { useState } from 'react';
-import { useBag } from './BagContext'; // Import useBag from your BagContext
+import { useBag } from './BagContext';
 import SideBar from './SideBar';
 import BagPage from './BagPage';
 import { Link } from 'react-router-dom';
 import './Bag.css';
 
 const Bag = () => {
-  const { bagItems, addToBag, removeFromBag } = useBag(); // Use the useBag hook to get the bagItems, addToBag, and removeFromBag functions
+  const { bagItems, addToBag, removeFromBag, updateQuantity, total } = useBag();
 
   const [quantities, setQuantities] = useState(
-    bagItems.map(item => ({ id: item.id, quantity: 1 })) // Initialize quantities with default values
+    bagItems.map(item => ({ id: item.id, quantity: item.quantity })) // Initialize quantities with existing quantities
   );
 
-  // Calculate the total price
-  const total = bagItems.reduce((sum, item) => {
-    const quantity = quantities.find(q => q.id === item.id).quantity;
-    return sum + item.price * quantity;
-  }, 0);
-
-  // Update the quantity for a specific item
   const handleQuantityChange = (itemId, newQuantity) => {
     setQuantities(prevQuantities =>
       prevQuantities.map(q =>
         q.id === itemId ? { ...q, quantity: newQuantity } : q
       )
     );
+    const product = bagItems.find(item => item.id === itemId);
+    updateQuantity(product, newQuantity); // Update the quantity and total
   };
 
   return (
