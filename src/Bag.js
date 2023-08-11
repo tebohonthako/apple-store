@@ -28,9 +28,13 @@ const Bag = () => {
 
   return (
     <div className="container">
-      <div className="mt-3  back-home-bag">
-        <Link to="/">Keep Shopping</Link>
-      </div>
+
+        <Link to="/">
+          <button className="mt-3  back-home-bag">
+          Keep Shopping
+          </button>
+        </Link>
+
       <h1>Check Your Bag Items</h1>
       {!isCheckoutPage && <SideBar />} {/* Only render if not on the checkout page */}
       {!isCheckoutPage && <BagPage />} {/* Only render if not on the checkout page */}
