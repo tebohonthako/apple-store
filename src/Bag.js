@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useBag } from './BagContext';
+import { Link, useLocation } from 'react-router-dom'; // Import useLocation
+import './Bag.css';
 import SideBar from './SideBar';
 import BagPage from './BagPage';
-import { Link } from 'react-router-dom';
-import './Bag.css';
 
 const Bag = () => {
   const { bagItems, addToBag, removeFromBag, updateQuantity, total } = useBag();
+  const location = useLocation(); // Get the current location
 
   const [quantities, setQuantities] = useState(
     bagItems.map(item => ({ id: item.id, quantity: item.quantity })) // Initialize quantities with existing quantities
@@ -22,14 +23,17 @@ const Bag = () => {
     updateQuantity(product, newQuantity); // Update the quantity and total
   };
 
+  // Check if we're on the checkout page
+  const isCheckoutPage = location.pathname === '/Checkout';
+
   return (
     <div className="container">
       <div className="mt-3  back-home-bag">
         <Link to="/">Keep Shopping</Link>
       </div>
       <h1>Check Your Bag Items</h1>
-      <SideBar/>
-      <BagPage/>
+      {!isCheckoutPage && <SideBar />} {/* Only render if not on the checkout page */}
+      {!isCheckoutPage && <BagPage />} {/* Only render if not on the checkout page */}
       <ul className="bag-list">
         {bagItems.map((item, index) => (
           <li key={index} className="bag-item">
