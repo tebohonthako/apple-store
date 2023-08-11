@@ -1,4 +1,6 @@
-/* Bag.css */
+body {
+  margin-top: 30px;
+}
 .bag-list {
   list-style: none;
   padding: 0;
@@ -7,9 +9,26 @@
 .bag-item {
   display: flex;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 10px;
+  background-color: white;
+}
+
+.back-home-bag{
+  position: absolute;
+  top: 20px;
+  left:150px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.back-home-bag:hover {
+  background-color: #0d6efd;
+  text-decoration: none;
 }
 
 .bag-item-image {

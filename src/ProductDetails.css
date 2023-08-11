@@ -1,18 +1,118 @@
+/* ProductDetails.css */
+
+.product-details-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.product-img-info{
+  display: flex;
+}
+
 .product-details {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  margin-right: 30rem;
 }
 
 .product-img {
   max-width: 300px;
   margin-right: 20px;
+  border-radius: 5%;
 }
 
 .product-info {
   flex: 1;
+  margin-top: 4rem;
 }
 
-.add-to-bag{
-  background-color: black;
+.product-info h1 {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-weight: bolder;
+}
+
+.product-info p {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.card-text-description {
+  font-size: 14px;
+  color: #6c757d;
+  font-weight: bold;
+}
+
+.add-to-bag {
+  margin-top: 10rem;
+  padding: 10px 20px;
+  font-size: 16px;
   border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 15px;
+}
+
+.back-home{
+  position: absolute;
+  top: 20px;
+  left:150px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 15px;
+  padding: 10px;
+}
+.back-home:hover {
+  background-color: #0d6efd;
+  text-decoration: none;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color:white;
+}
+
+.add-to-bag:hover {
+  background-color: #0056b3;
+}
+
+.product-specs {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Media Query for Responsive Design */
+
+@media (max-width: 768px) {
+  .product-details-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 20px;
+  }
+}
+
+.list-group-item{
+  border: none;
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background-color: #e5e5e5;
 }

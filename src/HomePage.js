@@ -4,6 +4,7 @@ import products from './data'; // Import your products data
 import SearchBar from './SearchBar';
 import SideBar from './SideBar';
 import BagSideBar from './BagSideBar';
+import './HomePage.css';
 import './App.css';
 
 const Homepage = () => {
@@ -41,7 +42,7 @@ const Homepage = () => {
             </div>
           </div>
         ))}
-      
+
       </div>
     </div>
   );
