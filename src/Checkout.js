@@ -2,9 +2,15 @@ import React from 'react';
 import UserData from './UserData'; // Import the user data
 import './Checkout.css';
 import Bag from './Bag';
+import OrderSummary from './OrderSummary';
+import { useBag } from './BagContext'; // Import the useBag hook if it's not already imported
 
 const Checkout = () => {
   const user = UserData[0]; // Assuming you have only one user in the array
+  const total = user.total; // Update this with the appropriate value
+  
+  // Extract total from the useBag hook
+  const { total: bagTotal } = useBag();
 
   return (
     <div className="checkout-container">
@@ -26,19 +32,18 @@ const Checkout = () => {
         <p>CVV: {user.paymentMethod.cvv}</p>
       </div>
       <div className="billing-info">
-      <p>
-          <input
-            type="checkbox"
-          />
+        <p>
+          <input type="checkbox" />
           Billing Address same as Shipping Address
         </p>
-       
       </div>
       <div className="gift-card-info">
         <h3>Gift Card</h3>
         <p>Amount: {user.giftCard}</p>
       </div>
-      <Bag/>
+      {/* <OrderSummary total={total} /> */}
+      <OrderSummary total={bagTotal} /> {/* Add OrderSummary with bag total */}
+      <Bag />
     </div>
   );
 };
