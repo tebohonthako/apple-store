@@ -23,9 +23,11 @@ const ProductDetails = () => {
     <div className="product-details-container container mt-5">
       <SideBar />
       <BagSideBar />
-      <div className="mt-3 back-home">
-        <Link to="/">Keep Shopping</Link>
-      </div>
+      <Link to="/">
+      <button className="mt-3 back-home">
+       Keep Shopping
+      </button>
+      </Link>
       <div className="product-details">
         <div className='product-img-info'>
         <img src={product.imageUrl} className="product-img" alt={product.title} />
