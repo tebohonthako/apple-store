@@ -23,23 +23,25 @@ const ProductDetails = () => {
     <div className="product-details-container container mt-5">
       <SideBar />
       <BagSideBar />
-      <div className="mt-3">
-        <Link to="/">Back</Link>
+      <div className="mt-3 back-home">
+        <Link to="/">Keep Shopping</Link>
       </div>
       <div className="product-details">
+        <div className='product-img-info'>
         <img src={product.imageUrl} className="product-img" alt={product.title} />
         <div className="product-info">
           <h1 className="card-title">{product.title}</h1>
-          <p className="card-text">{product.description}</p>
+          <p className="card-text-description">{product.description}</p>
           <p className="card-text">Rating: {product.rating}</p>
           <p className="card-text">
             Price: {product.currency} {product.price.toFixed(2)}
           </p>
-          <Link to="/Bag" className="btn btn-primary">
-          <button className="btn btn-primary" onClick={() => addToBag(product)}>
+          <Link to="/Bag">
+          <button className="btn btn-primary add-to-bag" onClick={() => addToBag(product)}>
             <FontAwesomeIcon icon={faShoppingBag} /> Add to Bag
           </button>
           </Link>
+          </div>
         </div>
         <hr />
         <br />

@@ -24,10 +24,10 @@ const Bag = () => {
 
   return (
     <div className="container">
-      <div className="mt-3">
-        <Link to="/">Back</Link>
+      <div className="mt-3  back-home-bag">
+        <Link to="/">Keep Shopping</Link>
       </div>
-      <h1>Your Bag</h1>
+      <h1>Check Your Bag Items</h1>
       <SideBar/>
       <BagPage/>
       <ul className="bag-list">

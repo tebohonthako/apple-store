@@ -16,7 +16,7 @@ const BagPage = () => {
           <img key={index} src={item.imageUrl} alt={item.title} className="bag-item-image" />
         ))}
       </div>
-      <p>Total: ${total.toFixed(2)}</p> {/* Display the total from context */}
+      <p>Bag Total: ${total.toFixed(2)}</p> {/* Display the total from context */}
       <Link to="/Checkout">
         <button className="view-bag-button">
           Checkout
