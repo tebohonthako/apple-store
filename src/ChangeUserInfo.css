@@ -1,0 +1,59 @@
+body {
+  color: #6c757d;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.centered-border-user {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 650px;
+}
+
+.form-control{
+  border-radius: 8px;
+  border: none;
+  box-shadow: darkgrey 0px 5px 15px;
+}
+
+.save-changes-button {
+  background-color: black;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.def-address{
+  margin-top: 15px;
+}
+
+
+.back-btn-user {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #6c757d;
+}
+
+.back-btn-user:hover {
+  color: black;
+}
+
+.back-btn-icon {
+  display: flex;
+  justify-content: space-between;
+}
