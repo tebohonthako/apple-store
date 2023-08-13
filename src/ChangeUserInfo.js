@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import UserData from './UserData'; // Import the user data
 import './ChangeUserInfo.css'; // Import your custom CSS for styling
 
 const ChangeUserInfo = () => {
-  // Assuming you have only one user in the array
   const user = UserData[0];
+  const navigate = useNavigate(); // Create a navigate function
 
   // State for form fields
   const [name, setName] = useState(user.name);
@@ -15,11 +15,22 @@ const ChangeUserInfo = () => {
   const [zip, setZip] = useState(user.shippingAddress.zip);
   const [country, setCountry] = useState(user.shippingAddress.country);
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Update the user data here
-    // You can use the setState functions to update the state of the form fields
+    console.log("Submitting form...");
+    const updatedUser = {
+      ...user,
+      name,
+      shippingAddress: {
+        street,
+        city,
+        state,
+        zip,
+        country,
+      },
+    };
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+    navigate('/checkout'); // Redirect to the checkout page using navigate function
   };
 
   return (
@@ -51,9 +62,9 @@ const ChangeUserInfo = () => {
           <input type="text" id="country" className="form-control" value={country} onChange={(e) => setCountry(e.target.value)} />
         </div>
         <div className="form-group">
-          <Link to="/checkout" className="save-changes-link">
-            <button className="btn btn-primary save-changes-button">Save Changes</button>
-          </Link>
+          <button type="submit" className="btn btn-primary save-changes-button">
+            Save Changes
+          </button>
         </div>
       </form>
     </div>

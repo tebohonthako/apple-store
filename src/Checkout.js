@@ -1,48 +1,48 @@
-// Checkout.js
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import UserData from './UserData'; // Import the user data
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Checkout.css';
 import Bag from './Bag';
 import OrderSummary from './OrderSummary';
-import { useBag } from './BagContext'; // Import the useBag hook if it's not already imported
-import { Link } from 'react-router-dom';
+import { useBag } from './BagContext';
+import UserData from './UserData';
+import { Link } from 'react-router-dom'; // Don't forget to import Link
 
 const Checkout = () => {
-  const user = UserData[0]; // Assuming you have only one user in the array
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Access paymentMethod from state
   const paymentMethod = location.state?.paymentMethod;
 
-  const total = user.total; // Update this with the appropriate value
-
   // Extract total from the useBag hook
   const { total: bagTotal } = useBag();
+  const storedUser = JSON.parse(localStorage.getItem('user')) || UserData[0];
+
+  const handleChangeUserInfo = () => {
+    navigate('/ChangeUserInfo');
+  };
 
   return (
     <div className="checkout-container">
       <h2>Checkout</h2>
       <div className="user-info">
         <h3>Shipping Address</h3>
-        <p>Name: {user.name}</p>
-        <p>Street: {user.shippingAddress.street}</p>
-        <p>City: {user.shippingAddress.city}</p>
-        <p>State: {user.shippingAddress.state}</p>
-        <p>Zip: {user.shippingAddress.zip}</p>
-        <p>Country: {user.shippingAddress.country}</p>
-        <Link to="/ChangeUserInfo">
-          <button className="change-buttons">
-            Change User Info
-          </button>
-        </Link>
+        <p>Name: {storedUser.name}</p>
+        <p>Street: {storedUser.shippingAddress.street}</p>
+        <p>City: {storedUser.shippingAddress.city}</p>
+        <p>State: {storedUser.shippingAddress.state}</p>
+        <p>Zip: {storedUser.shippingAddress.zip}</p>
+        <p>Country: {storedUser.shippingAddress.country}</p>
+        <button className="change-buttons" onClick={handleChangeUserInfo}>
+          Change User Info
+        </button>
       </div>
       <div className="payment-info">
         <h3>Payment Method</h3>
-        <p>Type: {paymentMethod?.type || user.paymentMethod.type}</p>
-        <p>Card Number: {paymentMethod?.cardNumber || user.paymentMethod.cardNumber}</p>
-        <p>Expiration Date: {paymentMethod?.expirationDate || user.paymentMethod.expirationDate}</p>
-        <p>CVV: {paymentMethod?.cvv || user.paymentMethod.cvv}</p>
+        <p>Type: {paymentMethod?.type || storedUser.paymentMethod.type}</p>
+        <p>Card Number: {paymentMethod?.cardNumber || storedUser.paymentMethod.cardNumber}</p>
+        <p>Expiration Date: {paymentMethod?.expirationDate || storedUser.paymentMethod.expirationDate}</p>
+        <p>CVV: {paymentMethod?.cvv || storedUser.paymentMethod.cvv}</p>
         <Link to="/ChangePaymentInfo">
           <button className="change-buttons">
             Change Payment Info
@@ -58,10 +58,9 @@ const Checkout = () => {
       </div>
       <div className="gift-card-info">
         <h3>Gift Card</h3>
-        <p>Amount: {user.giftCard}</p>
+        <p>Amount: {storedUser.giftCard}</p>
       </div>
-      {/* <OrderSummary total={total} /> */}
-      <OrderSummary total={bagTotal} /> {/* Add OrderSummary with bag total */}
+      <OrderSummary total={bagTotal} />
       <Bag />
     </div>
   );
