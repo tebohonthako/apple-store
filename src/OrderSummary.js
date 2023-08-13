@@ -16,7 +16,7 @@ const OrderSummary = ({ total }) => {
       <div className="order-summary-container">
         <h6>Order Summary</h6>
         <p>Items: $ {formattedTotal}</p>
-        <p>Shipping: $ 6.99</p>
+        <p>Shipping: $ 0.00</p>
         <p>Gift card: $ 0.00</p>
         <hr></hr>
         <p className="order-total">Order Total: $ {formattedTotal}</p>
