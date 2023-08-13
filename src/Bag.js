@@ -42,17 +42,18 @@ const Bag = () => {
         {bagItems.map((item, index) => (
           <li key={index} className="bag-item">
             <div className="bag-item-content">
-              <img src={item.imageUrl} alt={item.title} className="bag-item-image" />
+              <img src={item.imageUrl} alt={item.title} className="bag-item-image"/>
               <div className="bag-item-details">
-                <h2>{item.title}</h2>
-                <p>Price: {item.currency} {item.price.toFixed(2)}</p>
-                <p>Rating: {item.rating}</p>
-                <h3>Specs:</h3>
+                <h2 className='title'>{item.title}</h2>
+                <p className='item-paragraph'>{item.description}</p>
+                <p className='item-paragraph' >Rating: {item.rating}</p>
+                <p className='item-paragraph'>Price: {item.currency} {item.price.toFixed(2)}</p>
+                {/* <h3>Specs:</h3>
                 <ul>
                   {item.specs.map((spec, specIndex) => (
                     <li key={specIndex}>{spec}</li>
                   ))}
-                </ul>
+                </ul> */}
                 <label>Quantity: </label>
                 <input
                   type="number"
@@ -68,7 +69,6 @@ const Bag = () => {
           </li>
         ))}
       </ul>
-      <p>Total: ${total.toFixed(2)}</p> {/* Display the total */}
     </div>
   );
 };

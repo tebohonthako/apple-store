@@ -29,7 +29,7 @@ const Homepage = () => {
       <div className="row product-list">
         {filteredProducts.map((product) => (
           <div key={product.id} className="col-md-3 mb-4">
-            <div className="card" style={{ width: '14rem' }}>
+            <div className="card" style={{ width: '10rem' }}>
               <img src={product.imageUrl} className="card-img-top" alt={product.title} />
               <div className="card-body">
                 <h5 className="card-title">{product.title}</h5>
