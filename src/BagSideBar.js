@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useBag } from './BagContext'; // Import useBag from your BagContext
 import './BagSideBar.css'; // Import your custom CSS for styling
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const BagSideBar = () => {
   const { bagItems } = useBag(); // Use the useBag hook to get the bagItems
@@ -16,7 +19,7 @@ const BagSideBar = () => {
       </div>
       <Link to="/Bag">
         <button className="view-bag-button">
-          View Bag
+        <FontAwesomeIcon icon={faShoppingBag} /> View Bag
         </button>
       </Link>
 
