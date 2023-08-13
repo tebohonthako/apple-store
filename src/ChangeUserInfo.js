@@ -36,7 +36,7 @@ const ChangeUserInfo = () => {
 
   return (
     <div className="form-container">
-      <div className="centered-border">
+      <div className="centered-border-user">
       <form className="user-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Shipping Name:</label>
