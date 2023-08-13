@@ -2,20 +2,31 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 300px; /* Adjust width as needed */
-    height: 100%;
+    width: 200px; /* Adjust width as needed */
+    height: 40%;
     background-color: #f9f9f9;
     border-left: 1px solid #ddd;
     padding: 20px;
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 1rem;
+    margin-top: 5rem;
+    margin-right: 20rem;
+    border-radius: 1rem;
   }
-  
+  h6 {
+    font-weight: 700;
+  }
   .order-summary-container {
     text-align: center;
   }
   
+  .order-total {
+    color: red;
+    font-weight: 500;
+  }
   .place-order-button {
     display: block;
+    margin: 0 auto;
     width: 100%;
     margin-top: 10px;
     background-color: black;
@@ -25,6 +36,7 @@
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 8px;
+    font-size: 12px;
   }
   
   .place-order-button:hover {
@@ -35,8 +47,9 @@
     color: black;
     border-radius: 0.5rem;
     border: 1px solid black;
-    margin-top: 1rem;
-    margin-left: 13rem;
+    margin-top: 4rem;
+    margin-left: 8.3rem;
+    font-size: 12px;
   }
   .back-btn:hover {
     background-color: #0056b3;

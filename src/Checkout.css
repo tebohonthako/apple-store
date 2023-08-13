@@ -1,10 +1,12 @@
 .checkout-container {
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #f9f9f9;
+    margin-top: 5rem;
+    margin-left: 15rem;
   }
   
   h2 {
@@ -21,6 +23,7 @@
     margin-bottom: 20px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
   }
   
   h3 {
@@ -37,4 +40,9 @@
   input[type="checkbox"] {
     margin-right: 10px;
   }
-  
+  button {
+    background-color: white;
+    color: black;
+    border: 1px solid #333;
+    border-radius: 11px;
+  }

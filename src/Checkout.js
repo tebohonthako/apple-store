@@ -24,28 +24,27 @@ const Checkout = () => {
 
   return (
     <div className="checkout-container">
-      <h2>Checkout</h2>
       <div className="user-info">
-        <h3>Shipping Address</h3>
-        <p>Name: {storedUser.name}</p>
-        <p>Street: {storedUser.shippingAddress.street}</p>
-        <p>City: {storedUser.shippingAddress.city}</p>
-        <p>State: {storedUser.shippingAddress.state}</p>
-        <p>Zip: {storedUser.shippingAddress.zip}</p>
-        <p>Country: {storedUser.shippingAddress.country}</p>
+        <h3>S H I P P I N G   A D D R E S S </h3>
+        <p>{storedUser.name}</p>
+        <p>{storedUser.shippingAddress.street}</p>
+        <p>{storedUser.shippingAddress.city}</p>
+        <p>{storedUser.shippingAddress.state}</p>
+        <p>{storedUser.shippingAddress.zip}</p>
+        <p>{storedUser.shippingAddress.country}</p>
         <button className="change-buttons" onClick={handleChangeUserInfo}>
-          Change User Info
+          Change
         </button>
       </div>
       <div className="payment-info">
-        <h3>Payment Method</h3>
+        <h3>P A Y M E N T  M E T H O D </h3>
         <p>Type: {paymentMethod?.type || storedUser.paymentMethod.type}</p>
         <p>Card Number: {paymentMethod?.cardNumber || storedUser.paymentMethod.cardNumber}</p>
         <p>Expiration Date: {paymentMethod?.expirationDate || storedUser.paymentMethod.expirationDate}</p>
         <p>CVV: {paymentMethod?.cvv || storedUser.paymentMethod.cvv}</p>
         <Link to="/ChangePaymentInfo">
           <button className="change-buttons">
-            Change Payment Info
+            Change
           </button>
         </Link>
       </div>

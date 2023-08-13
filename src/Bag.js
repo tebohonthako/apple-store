@@ -31,11 +31,11 @@ const Bag = () => {
 
         <Link to="/">
           <button className="mt-3  back-home-bag">
-          Keep Shopping
+          Back
           </button>
         </Link>
 
-      <h1>Check Your Bag Items</h1>
+      <h1 className='check-yourbag-h1'>Check Your Bag Items</h1>
       {!isCheckoutPage && <SideBar />} {/* Only render if not on the checkout page */}
       {!isCheckoutPage && <BagPage />} {/* Only render if not on the checkout page */}
       <ul className="bag-list">

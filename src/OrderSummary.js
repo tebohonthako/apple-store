@@ -14,10 +14,15 @@ const OrderSummary = ({ total }) => {
   return (
     <div className="order-summary-sidebar">
       <div className="order-summary-container">
-        <h3>Order Summary</h3>
-        <p>Total: ${formattedTotal}</p>
+        <h6>Order Summary</h6>
+        <p>Items: $ {formattedTotal}</p>
+        <p>Shipping: $ 6.99</p>
+        <p>Gift card: $ 0.00</p>
+        <hr></hr>
+        <p className="order-total">Order Total: $ {formattedTotal}</p>
+        <hr></hr>
         <button className="place-order-button" onClick={placeOrder}>
-          Place Order
+          Place your order
         </button>
         <Link to="/">
             <button className='back-btn'>
