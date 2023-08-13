@@ -42,7 +42,7 @@
   width: 25%;
   padding: 0.5rem;
   margin-bottom: 2rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   border: 0rem solid white;
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
 
@@ -52,4 +52,7 @@
   margin-left: -20rem;
   margin-top: 2rem;
 }
-
+.cards {
+  margin-right: 10rem;
+  margin-left: 3rem;
+}

@@ -12,16 +12,18 @@
   right: 0; /* Stick to the right of the viewport */
   height: 100vh; /* Set full viewport height */
   overflow-y: auto; /* Add scrollbars if content overflows */
+  margin-left: 5rem;
+  
 }
 .bag-images {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   margin-top: 15px;
 }
 
 .bag-item-image {
-  width: 60px;
+  width: 20px;
   height: auto;
   margin: 5px;
 }
