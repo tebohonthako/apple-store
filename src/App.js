@@ -9,6 +9,7 @@ import { BagProvider } from './BagContext'; // Import your BagProvider
 import Checkout from './Checkout';
 import ChangeUserInfo from './ChangeUserInfo';
 import ChangePaymentInfo from './ChangePaymentInfo';
+import OrderSuccess from './OrderSuccess';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Checkout" element={<Checkout/>}/>
         <Route path="/ChangeUserInfo" element={<ChangeUserInfo/>}/>
         <Route path="/ChangePaymentInfo" element={<ChangePaymentInfo/>}/>
+        <Route path="/OrderSuccess" element={<OrderSuccess/>}/>
         </Routes>
       </Router>
     </BagProvider>

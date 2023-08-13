@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './OrderSummary.css';
-import { Link } from 'react-router-dom';
 
 const OrderSummary = ({ total }) => {
+  const navigate = useNavigate();
+
   const placeOrder = () => {
-    // Simulate a successful order placement
-    window.alert('Order successfully placed!');
+    // Redirect to the success page
+    navigate('/Ordersuccess');
   };
 
-  // Check if total is a valid number before calling toFixed
   const formattedTotal = typeof total === 'number' ? total.toFixed(2) : '0.00';
 
   return (
@@ -25,9 +26,9 @@ const OrderSummary = ({ total }) => {
           Place your order
         </button>
         <Link to="/">
-            <button className='back-btn'>
+          <button className='back-btn'>
             Back
-            </button>
+          </button>
         </Link>
       </div>
     </div>
