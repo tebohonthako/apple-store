@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux'; // Import Provider
+// import ReactDOM from 'react-dom';
+// import { Provider } from 'react-redux'; // Import Provider
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage'; // Import your homepage component
 import ProductDetails from './ProductDetails';

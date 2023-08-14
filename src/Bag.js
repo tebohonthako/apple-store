@@ -6,7 +6,7 @@ import SideBar from './SideBar';
 import BagPage from './BagPage';
 
 const Bag = () => {
-  const { bagItems, addToBag, removeFromBag, updateQuantity, total } = useBag();
+  const { bagItems, removeFromBag, updateQuantity} = useBag();
   const location = useLocation();
 
   const [quantities, setQuantities] = useState(
