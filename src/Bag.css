@@ -1,28 +1,19 @@
-body {
-  margin-top: 30px;
-}
-.bag-list {
-  list-style: none;
-  padding: 0;
-  width: 70%;
-  margin-right: 2;
+
+
+.bag-container {
+  margin-left: 10rem;
+  margin-right: 8rem;
+  width: 80%;
 }
 
-.bag-item {
-  display: flex;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: white;
-}
-.item-paragraph{
-  margin-left: 5.5rem;
+.back-link {
+  text-decoration: none;
 }
 
-.back-home-bag{
+.back-button {
   position: absolute;
   top: 20px;
-  left:150px;
+  left: 150px;
   background-color: white;
   color: black;
   cursor: pointer;
@@ -32,21 +23,43 @@ body {
   font-size: 10px;
   margin-left: -2rem;
 }
-.check-yourbag-h1 {
-  margin-left: 1rem;
-  margin-bottom: 2rem;
-}
 
-.back-home-bag:hover {
+.back-button:hover {
   background-color: black;
   text-decoration: none;
   color: white;
 }
 
-.bag-item-image {
-  width: 100px;
+.check-your-bag-heading {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  color: black;
+  margin-top: 1rem;
+}
+
+.bag-list {
+  list-style: none;
+  padding: 0;
+  width: 70%;
+  margin-left: 5rem;
+}
+
+.bag-item {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: white;
+}
+
+.item-description {
+  margin-left: 5.5rem;
+}
+
+.bag-item-img {
+  width: 150px;
   height: auto;
-  margin-right: 10px;
+  margin-right: 5rem;
 }
 
 .bag-item-details {
@@ -56,10 +69,9 @@ body {
 .bag-item-content {
   display: flex;
   align-items: center;
-  
 }
 
-button {
+.remove-button {
   background-color: #dc3545;
   color: white;
   border: none;
@@ -68,11 +80,6 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.remove-button:hover {
   background-color: #c82333;
-}
-.container {
-  margin-left: 10rem;
-  margin-right: 8rem;
-  width: 80%;
 }

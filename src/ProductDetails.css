@@ -7,7 +7,7 @@
   align-items: flex-start;
 }
 
-.product-img-info{
+.product-img-info {
   display: flex;
 }
 
@@ -27,27 +27,40 @@
 .product-info {
   flex: 1;
   margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  color: #333;
 }
 
-.product-info h1 {
+.product-title h1 {
   font-size: 30px;
   margin: 0 0 10px;
   font-weight: bolder;
 }
 
-.product-info p {
+.product-description {
   font-size: 16px;
   margin: 0 0 8px;
+  color: #333; /* Adjust color as needed */
 }
 
-.card-text-description {
+.product-rating {
   font-size: 14px;
-  color: #6c757d;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
-.add-to-bag {
-  margin-top: 10rem;
+.product-price {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.add-to-bag-link {
+  text-decoration: none;
+}
+
+.add-to-bag-button {
+  margin-top: 1.5rem;
   padding: 10px 20px;
   font-size: 16px;
   border: none;
@@ -58,10 +71,18 @@
   border-radius: 15px;
 }
 
-.back-home{
+.add-to-bag-button:hover {
+  background-color: #0056b3;
+}
+
+.back-home-link {
+  text-decoration: none;
+}
+
+.back-home-button {
   position: absolute;
   top: 20px;
-  left:150px;
+  left: 150px;
   background-color: black;
   color: white;
   cursor: pointer;
@@ -69,31 +90,33 @@
   border-radius: 15px;
   padding: 10px;
 }
-.back-home:hover {
+
+.back-home-button:hover {
   background-color: #0d6efd;
-  text-decoration: none;
 }
 
-a{
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
-  color:white;
-}
-
-.add-to-bag:hover {
-  background-color: #0056b3;
-}
-
-.product-specs {
+.product-specs-list {
   margin-top: 20px;
   font-size: 14px;
 }
 
-/* Media Query for Responsive Design */
+.spec-item {
+  border: none;
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background-color: #e5e5e5;
+  margin-bottom: 8px;
+}
 
+.specs-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Media Query for Responsive Design */
 @media (max-width: 768px) {
   .product-details-container {
     flex-direction: column;
@@ -106,13 +129,4 @@ a:hover {
     height: auto;
     margin: 0 auto 20px;
   }
-}
-
-.list-group-item{
-  border: none;
-  position: relative;
-  display: block;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  background-color: #e5e5e5;
 }
