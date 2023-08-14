@@ -46,3 +46,21 @@
     border: 1px solid #333;
     border-radius: 11px;
   }
+  
+  .change-buttons {
+    float: right;
+  }
+  
+  .user-info, .payment-info, .billing-info, .gift-card-info {
+    position: relative;
+  }
+  
+  .change {
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    width: 10%;
+    padding: 0.5rem;
+    font-size: 8px;
+  }
+  

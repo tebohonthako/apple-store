@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Homepage functional compononent
 const Homepage = () => {
-  const [filteredProducts, setFilteredProducts] = useState(products);  // useState - filter products searched in search bar
+  const [filteredProducts, setFilteredProducts] = useState(products);  // 
 
   const handleSearch = (query) => {                                 // function for filter searchbar
     const filtered = products.filter((product) =>
