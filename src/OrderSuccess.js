@@ -5,7 +5,7 @@ const SuccessPage = () => {
   return (
     <div className="container">
       <div className="content">
-        <h1>
+        <h1 className='success'>
           <span>O</span>
           <span>R</span>
           <span>D</span>

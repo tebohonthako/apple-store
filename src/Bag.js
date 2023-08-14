@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { useBag } from './BagContext';
-import { Link, useLocation } from 'react-router-dom'; // Import useLocation
+import { Link, useLocation } from 'react-router-dom';
 import './Bag.css';
 import SideBar from './SideBar';
 import BagPage from './BagPage';
 
 const Bag = () => {
   const { bagItems, addToBag, removeFromBag, updateQuantity, total } = useBag();
-  const location = useLocation(); // Get the current location
+  const location = useLocation();
 
   const [quantities, setQuantities] = useState(
-    bagItems.map(item => ({ id: item.id, quantity: item.quantity })) // Initialize quantities with existing quantities
+    bagItems.map(item => ({ id: item.id, quantity: item.quantity }))
   );
 
   const handleQuantityChange = (itemId, newQuantity) => {
@@ -20,41 +20,30 @@ const Bag = () => {
       )
     );
     const product = bagItems.find(item => item.id === itemId);
-    updateQuantity(product, newQuantity); // Update the quantity and total
+    updateQuantity(product, newQuantity);
   };
 
-  // Check if we're on the checkout page
   const isCheckoutPage = location.pathname === '/Checkout';
 
   return (
-    <div className="container">
-
-        <Link to="/">
-          <button className="mt-3  back-home-bag">
-          Back
-          </button>
-        </Link>
-
-      <h1 className='check-yourbag-h1'>Check Your Bag Items</h1>
-      {!isCheckoutPage && <SideBar />} {/* Only render if not on the checkout page */}
-      {!isCheckoutPage && <BagPage />} {/* Only render if not on the checkout page */}
+    <div className="bag-container">
+      <Link to="/" className="back-link">
+        <button className="back-button">Back</button>
+      </Link>
+      {!isCheckoutPage && <SideBar />}
+      {!isCheckoutPage && <BagPage />}
       <ul className="bag-list">
+        <h1 className="check-your-bag-heading">Check Your Bag Items</h1>
         {bagItems.map((item, index) => (
           <li key={index} className="bag-item">
             <div className="bag-item-content">
-              <img src={item.imageUrl} alt={item.title} className="bag-item-image"/>
+              <img src={item.imageUrl} alt={item.title} className="bag-item-img" />
               <div className="bag-item-details">
-                <h2 className='title'>{item.title}</h2>
-                <p className='item-paragraph'>{item.description}</p>
-                <p className='item-paragraph' >Rating: {item.rating}</p>
-                <p className='item-paragraph'>Price: {item.currency} {item.price.toFixed(2)}</p>
-                {/* <h3>Specs:</h3>
-                <ul>
-                  {item.specs.map((spec, specIndex) => (
-                    <li key={specIndex}>{spec}</li>
-                  ))}
-                </ul> */}
-                <label>Quantity: </label>
+                <h2 className="item-title">{item.title}</h2>
+                <p className="item-description">{item.description}</p>
+                <p className="item-paragraph">Rating: {item.rating}</p>
+                <p className="item-paragraph">Price: {item.currency} {item.price.toFixed(2)}</p>
+                <label className="quantity-label">Quantity: </label>
                 <input
                   type="number"
                   value={quantities.find(q => q.id === item.id).quantity}
@@ -63,7 +52,7 @@ const Bag = () => {
                     handleQuantityChange(item.id, parseInt(e.target.value))
                   }
                 />
-                <button onClick={() => removeFromBag(item)}>Remove</button> {/* Add Remove button */}
+                <button onClick={() => removeFromBag(item)} className="remove-button">Remove</button>
               </div>
             </div>
           </li>
