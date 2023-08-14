@@ -32,7 +32,7 @@ const Checkout = () => {
         <p>{storedUser.shippingAddress.state}</p>
         <p>{storedUser.shippingAddress.zip}</p>
         <p>{storedUser.shippingAddress.country}</p>
-        <button className="change-buttons" onClick={handleChangeUserInfo}>
+        <button className="change-buttons change" onClick={handleChangeUserInfo}>
           Change
         </button>
       </div>
@@ -43,21 +43,21 @@ const Checkout = () => {
         <p>Expiration Date: {paymentMethod?.expirationDate || storedUser.paymentMethod.expirationDate}</p>
         <p>CVV: {paymentMethod?.cvv || storedUser.paymentMethod.cvv}</p>
         <Link to="/ChangePaymentInfo">
-          <button className="change-buttons">
+          <button className="change-buttons change">
             Change
           </button>
         </Link>
-      </div>
-
-      <div className="billing-info">
+        {/* <div className="gift-card-info"> */}
+        <h6>Gift Card</h6>
+        <p>Amount: {storedUser.giftCard}</p>
+      {/* </div> */}
+        {/* <div className="billing-info"> */}
         <p>
           <input type="checkbox" />
           Billing Address same as Shipping Address
         </p>
-      </div>
-      <div className="gift-card-info">
-        <h3>Gift Card</h3>
-        <p>Amount: {storedUser.giftCard}</p>
+      {/* </div> */}
+      
       </div>
       <OrderSummary total={bagTotal} />
       <Bag />

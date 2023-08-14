@@ -26,7 +26,7 @@ const OrderSummary = ({ total }) => {
           Place your order
         </button>
         <Link to="/">
-          <button className='back-btn'>
+          <button className='back-btn '>
             Back
           </button>
         </Link>

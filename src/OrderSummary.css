@@ -48,8 +48,10 @@
     border-radius: 0.5rem;
     border: 1px solid black;
     margin-top: 4rem;
-    margin-left: 8.3rem;
+    margin-left: 4rem;
     font-size: 12px;
+    padding: 0.5rem;
+    width: 70%;
   }
   .back-btn:hover {
     background-color: #0056b3;
