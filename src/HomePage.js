@@ -10,11 +10,11 @@ import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-// Homepage functional compononent 
+// Homepage functional compononent
 const Homepage = () => {
   const [filteredProducts, setFilteredProducts] = useState(products);  // useState - filter products searched in search bar
 
-  const handleSearch = (query) => {                                 // function for filter searchbar 
+  const handleSearch = (query) => {                                 // function for filter searchbar
     const filtered = products.filter((product) =>
       product.title.toLowerCase().includes(query.toLowerCase())
     );
