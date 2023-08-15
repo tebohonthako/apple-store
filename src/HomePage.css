@@ -34,11 +34,17 @@
   margin-bottom: 1.5rem;
 }
 
-.card-img-top {
+/* .card-img-top {
   border-radius: 20px;
   width: 100%;
   height: auto;
-}
+} */
+
+/* .card-images{
+  width: 200px;
+  height: 250px;
+
+} */
 
 .card-body {
   background-color: #e5e5e5;

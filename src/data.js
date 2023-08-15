@@ -13,7 +13,7 @@ const products = [
     },
   {
       id: 2,
-      title: 'Sony ZX33OBT',
+      title: 'Sony ZX3',
       description: 'Light Grey',
       rating: '⭐⭐⭐',
       price: 39.99,

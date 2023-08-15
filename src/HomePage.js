@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Homepage functional compononent
 const Homepage = () => {
-  const [filteredProducts, setFilteredProducts] = useState(products);  // 
+  const [filteredProducts, setFilteredProducts] = useState(products);  //
 
   const handleSearch = (query) => {                                 // function for filter searchbar
     const filtered = products.filter((product) =>
@@ -30,7 +30,7 @@ const Homepage = () => {
         {filteredProducts.map((product) => (
           <div key={product.id} className="col-md-3 mb-4">
             <div className="card" style={{ width: '10rem' }}>
-              <img src={product.imageUrl} className="card-img-top" alt={product.title} />
+              <img src={product.imageUrl} style={{ width: '100%', height: '12rem', objectFit: 'cover' }} className="card-img-top card-images" alt={product.title} />
               <div className="card-body">
                 <h5 className="card-title">{product.title}</h5>
                 <p className="card-text">{product.description}</p>
